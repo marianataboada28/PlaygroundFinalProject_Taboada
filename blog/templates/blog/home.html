@@ -1,0 +1,14 @@
+<!-- blog/templates/blog/home.html
+<h1>Bienvenido a nuestro sitio</h1>
+<p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Inicia sesión</a></p>
+<p>¿Eres nuevo? <a href="{% url 'register' %}">Regístrate</a></p>
+<p>Ver tu <a href="{% url 'profile' %}">perfil</a>.</p>
+blog/templates/blog/home.html -->
+<html lang="en">
+<div style="text-align: left; margin-top: 50px;">
+    <h1 style="font-size: 2.5em; color: #007BFF;">¡Bienvenido a nuestro sitio!</h1>
+    <p style="font-size: 1.2em;">¿Ya tienes una cuenta? <a href="{% url 'login' %}" style="color: #007BFF; text-decoration: underline;">Inicia sesión</a></p>
+    <p style="font-size: 1.2em;">¿Eres nuevo? <a href="{% url 'register' %}" style="color: #28A745; text-decoration: underline;">Regístrate</a></p>
+    <p style="font-size: 1.2em;">Ver tu <a href="{% url 'profile' %}" style="color: #17A2B8; text-decoration: underline;">perfil</a>.</p>
+  </div>
+  </html>

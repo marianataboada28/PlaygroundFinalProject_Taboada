@@ -1,0 +1,109 @@
+<!-- blog/templates/blog/profile.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h2>Profile</h2>
+    <p>Welcome, {{ user.username }}!</p>
+    <form method="post" action="{% url 'blog:profile' %}">
+        {% csrf_token %}
+        {{ profile_form.as_p }}
+        <button type="submit">Save Profile</button>
+    </form>
+    <p><a href="{% url 'blog:logout' %}">Logout</a></p>
+</body>
+</html>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #007bff;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #495057;
+        }
+
+        form {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: block;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Perfil</h2>
+    <p>Bienvenid@, {{ user.username }}!</p>
+    <form method="post" action="{% url 'blog:profile' %}">
+        {% csrf_token %}
+        {{ profile_form.as_p }}
+        <button type="submit">Guardar perfil</button>
+    </form>
+    <p><a href="{% url 'blog:logout' %}">Salir</a></p>
+</body>
+</html>
+
